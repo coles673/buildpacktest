@@ -1,0 +1,25 @@
+name: Excerise
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connect to repo
+        uses: actions/checkout@v2
+      - name: Linux Time command
+        run: |
+          date
+
+  job2:
+    runs-on: macos-latest
+    steps:
+      - name: Connect to repo
+        uses: actions/checkout@v2
+      - name: macos Time command
+        run: |
+          date
