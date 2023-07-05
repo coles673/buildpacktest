@@ -23,3 +23,13 @@ jobs:
       - name: macos Time command
         run: |
           date
+
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install buildpack
+        run: |
+          sudo add-apt-repository ppa:cncf-buildpacks/pack-cli
+          sudo apt-get update
+          sudo apt-get install pack-cli
+          pack -h
